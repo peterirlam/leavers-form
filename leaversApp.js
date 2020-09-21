@@ -127,3 +127,16 @@ function getLongDateFormat(dateArray) {
     }
     return day + " " + monthname + " " + dateArray[2];
 }
+
+function sendLetter(role,workplace,team,name,email,phone,startingdate,leavingdate,addrline1,addrline2,town,county,postcode,reasonforleaving,outstandingexpenses,charityequipment,days_in_post) {
+  var roletype;
+  switch(role) {
+
+    case "Volunteer":
+    roletype = "volunteering role";
+    break;
+
+    case "Staff":
+    roletype = "employment";
+    break;
+}
