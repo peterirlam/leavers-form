@@ -166,3 +166,27 @@ var address;
         address = addrline1 + "\r" + town + "\r" + postcode;
         }
     }
+
+    if (days_in_post >= 180) {
+
+  var docid = DriveApp.getFileById("1n3zWEttQA8LiwADEBFH-a5oHzU6ycGBhz0KM3l_d2fs").makeCopy("Leavers_Letter_" + Utilities.formatDate(new Date(), "GMT+1", "dd-MMM-yyyy") + "_" + name, dstFolderId).getId()
+  var doc = DocumentApp.openById(docid);
+
+    var body = doc.getActiveSection();
+    body.replaceText("%fullname%", name);
+    body.replaceText("%addrline1%", address);
+    body.replaceText("%town%", town);
+    body.replaceText("%county%", county);
+    body.replaceText("%postcode%", postcode);
+    //body.replaceText("%name%", name.split(" ")[0]);
+    body.replaceText("%leavingdate%", leavingdateLongFormat);
+    body.replaceText("%today%", todayLongFormat);
+    body.replaceText("%team%", team);
+    body.replaceText("%area%", workplace);
+    body.replaceText("%roletype%", roletype);
+
+  doc.saveAndClose();
+
+GmailApp.sendEmail(/*CEO email hidden */, 'Leaver Notification (LETTER)', 'Please see the attached letter.', {bcc:/*manager email hidden */,attachments: [doc.getAs(MimeType.PDF)],name: 'Leaver Notification Letter' });
+//GmailApp.sendEmail('email hidden', 'Leaver Notification Letter - TEST PLEASE IGNORE', 'Please see the attached letter.', {attachments: [doc.getAs(MimeType.PDF)],name: 'Leaver Notification - TEST PLEASE IGNORE' });
+}
