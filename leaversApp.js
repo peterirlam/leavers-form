@@ -190,3 +190,68 @@ var address;
 GmailApp.sendEmail(/*CEO email hidden */, 'Leaver Notification (LETTER)', 'Please see the attached letter.', {bcc:/*manager email hidden */,attachments: [doc.getAs(MimeType.PDF)],name: 'Leaver Notification Letter' });
 //GmailApp.sendEmail('email hidden', 'Leaver Notification Letter - TEST PLEASE IGNORE', 'Please see the attached letter.', {attachments: [doc.getAs(MimeType.PDF)],name: 'Leaver Notification - TEST PLEASE IGNORE' });
 }
+
+  var docid2 = DriveApp.getFileById("1dm7XshpRE1jsHhUkV45X61-eYA1IjW6ut2H6g1mxhzE").makeCopy("Leavers_Report_" + Utilities.formatDate(new Date(), "GMT+1", "dd-MMM-yyyy") + "_" + name, dstFolderId).getId();
+  var doc2 = DocumentApp.openById(docid2);
+
+  if (phone.length < 1) {
+  phone = "Not recorded";
+  }
+  if (reasonforleaving.length < 1) {
+  reasonforleaving = "Not recorded";
+  }
+  if (outstandingexpenses.length < 1) {
+  outstandingexpenses = "None stated";
+  }
+  if (charityequipment.length < 1) {
+  charityequipment = "None stated";
+  }
+  var body2 = doc2.getActiveSection();
+
+    body2.replaceText("%fullname%",name);
+    body2.replaceText("%addrline1%", address)
+    body2.replaceText("%town%",town);
+    body2.replaceText("%county%",county);
+    body2.replaceText("%postcode%",postcode);
+    body2.replaceText("%name%", name.split(" ")[0]);
+    body2.replaceText("%startdate%", Utilities.formatDate(startdate, "GMT+1", "dd-MMM-yyyy"));
+    body2.replaceText("%leavingdate%", Utilities.formatDate(leavingdate, "GMT+1", "dd-MMM-yyyy"));
+    body2.replaceText("%team%", team);
+    body2.replaceText("%email%", email);
+    body2.replaceText("%phone%", phone);
+    body2.replaceText("%role%", role);
+    body2.replaceText("%workplace%", workplace);
+    body2.replaceText("%reasonforleaving%", reasonforleaving);
+    body2.replaceText("%outstandingexpenses%", outstandingexpenses);
+    body2.replaceText("%charityequipment%", charityequipment);
+
+doc2.saveAndClose();
+
+  switch(workplace) {
+    case "Leyland":
+      GmailApp.sendEmail(/*email hidden*/, 'Leaver Notification (REPORT)', 'Please see the attached leaver report.', {cc:/*emails hidden*/
+          ,attachments: [doc2.getAs(MimeType.PDF)],name: 'Leaver Notification Report' });
+    break;
+
+    case "Chorley":
+    GmailApp.sendEmail(/*email hidden*/, 'Leaver Notification (REPORT)', 'Please see the attached leaver report.', {cc:/*emails hidden*/,
+      attachments: [doc2.getAs(MimeType.PDF)],name: 'Leaver Notification Report' });
+
+    case "West Lancashire":
+    GmailApp.sendEmail(/*email hidden*/, 'Leaver Notification (REPORT)', 'Please see the attached leaver report.', {cc:/*emails hidden*/,
+      attachments: [doc2.getAs(MimeType.PDF)],name: 'Leaver Notification Report' });
+    break;
+
+    case "Wyre":
+    GmailApp.sendEmail(/*email hidden*/, 'Leaver Notification (REPORT)', 'Please see the attached leaver report.', {cc:/*emails hidden*/,
+      attachments: [doc2.getAs(MimeType.PDF)],name: 'Leaver Notification Report' });
+    //  GmailApp.sendEmail('email hidden', 'Leaver Notification (REPORT) - TEST PLEASE IGNORE', 'Please see the attached leaver report.', {attachments: [doc2.getAs(MimeType.PDF)],name: 'Leaver Notification Report - TEST PLEASE IGNORE' });
+    break;
+
+    case "Blackburn with Darwen":
+    GmailApp.sendEmail(/*email hidden*/, 'Leaver Notification (REPORT)', 'Please see the attached leaver report.', {cc:/*emails hidden*/,
+      attachments: [doc2.getAs(MimeType.PDF)],name: 'Leaver Notification Report' });
+
+    break;
+  }
+}
