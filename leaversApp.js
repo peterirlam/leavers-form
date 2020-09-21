@@ -28,3 +28,22 @@ function doPost(e) {
  .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 
 }
+
+function getScriptUrl() {
+ var url = ScriptApp.getService().getUrl();
+ return url;
+}
+
+function doGet(e) {
+  var currentuser = Session.getActiveUser().getEmail();
+  var authusers = [someUser@someEmail.org.uk];//users removed for anonimity
+  var isauthorised = authusers.indexOf(currentuser);
+
+  if ( isauthorised >= 0) {
+   return HtmlService.createHtmlOutputFromFile('Form');
+  } else {
+  var html = HtmlService.createTemplateFromFile('Error');
+  html.currentuser= currentuser;
+
+return html.evaluate().setSandboxMode(HtmlService.SandboxMode.IFRAME)
+.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
