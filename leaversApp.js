@@ -63,3 +63,67 @@ function ordinal_suffix_of(i) {
     }
     return "th";
 }
+
+function getLongDateFormat(dateArray) {
+  var ordinal;
+  var day;
+  if (dateArray[0].substring(0,1)  == "0") {
+  ordinal =  ordinal_suffix_of(dateArray[0].substring(1))
+  day = dateArray[0].substring(1);
+} else {
+  ordinal =  ordinal_suffix_of(dateArray[0])
+  day = dateArray[0];
+ }
+ var monthname;
+ switch(dateArray[1]) {
+
+       case "01":
+       monthname = "January";
+       break;
+
+       case "02":
+       monthname = "February";
+       break;
+
+       case "03":
+       monthname = "March";
+       break;
+
+       case "04":
+       monthname = "April";
+       break;
+
+       case "05":
+       monthname = "May";
+       break;
+
+       case "06":
+       monthname = "June";
+       break;
+
+       case "07":
+       monthname = "July";
+       break;
+
+       case "08":
+       monthname = "August";
+       break;
+
+       case "09":
+       monthname = "September";
+       break;
+
+       case "10":
+       monthname = "October";
+       break;
+
+       case "11":
+       monthname = "November";
+       break;
+
+       case "12":
+       monthname = "December";
+       break;
+    }
+    return day + " " + monthname + " " + dateArray[2];
+}
