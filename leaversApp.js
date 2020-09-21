@@ -140,3 +140,13 @@ function sendLetter(role,workplace,team,name,email,phone,startingdate,leavingdat
     roletype = "employment";
     break;
 }
+
+var dstFolderId = DriveApp.getFolderById("1lVsjyYWp2VdvSqEF4lgfgMXF6kEK-FcN");
+
+var startdateArray = startingdate.split("/");
+var leavingdateArray = leavingdate.split("/");
+var startdate = new Date(startdateArray[2] + "/" + startdateArray[1] + "/" + startdateArray[0]);
+var leavingdate = new Date(leavingdateArray[2] + "/" + leavingdateArray[1] + "/" + leavingdateArray[0]);
+var todayArray = Utilities.formatDate(new Date(), "GMT+1", "dd/MM/yyyy").split("/");;
+var leavingdateLongFormat = getLongDateFormat(leavingdateArray);
+var todayLongFormat = getLongDateFormat(todayArray);
