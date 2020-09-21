@@ -150,3 +150,19 @@ var leavingdate = new Date(leavingdateArray[2] + "/" + leavingdateArray[1] + "/"
 var todayArray = Utilities.formatDate(new Date(), "GMT+1", "dd/MM/yyyy").split("/");;
 var leavingdateLongFormat = getLongDateFormat(leavingdateArray);
 var todayLongFormat = getLongDateFormat(todayArray);
+
+var address;
+  if (addrline2.length >0) {
+    if (county.length > 1) {
+        address = addrline1 + '\r' + addrline2 + '\r' + town + '\r' + county  + '\r' + postcode;
+        } else {
+        address = addrline1 + '\r' + addrline2 + '\r' + town + '\r' + postcode;
+        }
+        } else {
+
+    if (county.length > 1) {
+        address = addrline1 + '\r' + town + '\r' + county  + '\r' + postcode;
+        } else {
+        address = addrline1 + "\r" + town + "\r" + postcode;
+        }
+    }
