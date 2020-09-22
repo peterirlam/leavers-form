@@ -469,4 +469,31 @@ function checkDates(startdatestring, enddatestring) {
       var isoendDate = enddatestring.split("/");
 
       enddatestring = isoendDate[1] + "/" + isoendDate[0] + "/" + isoendDate[2];
+
+
+      // To set two dates to two variables
+      //var date1 = new Date("06/30/2019");
+      //var date2= new Date("05/30/2019");
+      var date1 = new Date(startdatestring);
+      var date2 = new Date(enddatestring);
+
+      // Calculate the time difference of the dates
+      var Difference_In_Time = date2.getTime() - date1.getTime();
+
+      // Calculate the no. of days between the dates
+      var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+        if (Difference_In_Days >= 0) {
+
+         document.getElementById("days_in_post").value = Difference_In_Days;
+         document.getElementById("sdate").setCustomValidity("");
+         document.getElementById("edate").setCustomValidity("");
+       } else {
+
+         document.getElementById("edate").setCustomValidity("Start date cannot be later than end date.");
+        }
+      }
+    }
+
+</html>
 </script>
