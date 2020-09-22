@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Leaver form</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <style>
+    html,
+    body {
+      min-height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+    }
+
+    h2 {
+
+      font-weight: 400;
+      color: #FFF;
+      margin-left: -40px;
+      margin-bottom: -25px;
+      padding-top: 4px;
+    }
+
+    p {
+      margin: 0 0 5px;
+    }
+
+    .main-form {
+      display: inline-block;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #1c87c9;
+      width: 100%;
+    }
+
+    form {
+      padding: 25px;
+
+      margin: auto;
+      margin-top: 2px;
+      box-shadow: 0 2px 5px #f5f5f5;
+      background: #f5f5f5;
+      width: 855px;
+
+    }
+
+    .fas {
+      margin: 25px 10px 0;
+      font-size: 72px;
+      color: #fff;
+    }
+
+    .fa-envelope {
+      transform: rotate(-20deg);
+    }
+
+    .fa-at,
+    .fa-mail-bulk {
+      transform: rotate(10deg);
+    }
+
+    input,
+    textarea {
+      width: 300px;
+      padding: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #1c87c9;
+      outline: none;
+      display: block;
+    }
+
+
+    textarea {
+
+      width: 97%;
+      margin-bottom: 4px;
+      margin-top: 10px;
+
+    }
+
+    .addressfields {
+
+      margin-right: 100px;
+
+      margin-bottom: 6px;
+
+    }
+
+    input::placeholder {
+      color: #666;
+    }
+
+    button {
+      width: 300px;
+      padding: 10px;
+      border: none;
+      background: #1c87c9;
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #2371a0;
+    }
+
+    @media (min-width: 568px) {
+      .main-form {
+        flex-direction: row;
+      }
+
+
+      .dropbtn {
+        background-color: #fff;
+        color: #666;
+        padding: 4px 10px;
+        border: 1px solid #1c87c9;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        margin-top: -20px;
+
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+
+      .center_form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #ddd;
+    }
+
+    .alldropdowns {
+      margin-bottom: 5px;
+    }
+
+    .loader {
+      border: 8px solid #ff0000;
+      border-radius: 50%;
+      border-top: 8px solid #fff;
+      border-bottom: 8px solid #0000ff;
+      margin-left: -30px;
+      width: 8px;
+      height: 8px;
+      -webkit-animation: spin 2s linear infinite;
+      /* Safari */
+      animation: spin 2s linear infinite;
+
+      position: relative;
+      display: inline-block;
+
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="center_form">
+
+
+    <div class="main-form">
+
+      <div style="display:flex;width:100%;">
+
+
+        <image src="https://drive.google.com/uc?export=view&id=1PVRpXzFhn_K50DZumnxGct6azCEGHV7W" style="vertical-align:middle;display:inline;margin-left:20%;" width="200px" height="73px" />
+        <h2>Notification of Staff or Volunteer Leaving Citizens Advice Lancashire</h2>
+      </div>
+
+
+      <form onsubmit="formsubmitted()" action='https://script.google.com/a/calancs.org.uk/macros/s/AKfycby6iHe8fJhdQ0Hrtt87cFLTxmUd_yk2vokPpkTUFExYmjq9BMY/exec' method='post' id='leavers'>
+
+
+
+
+        <div class="info">
+
+
+          <div class="alldropdowns" style="display:flex;margin-bottom:10px;">
+
+
+            <label style="margin-top:5px;text-align:left;width:70px;">Role:</label>
+            <div class="dropdown">
+              <input style="width:120px;" id="role" name="role" class="dropbtn" placeholder="* Required" onclick="document.getElementById('role-dropdown').style.display= 'inline';" required>
+              <div id="role-dropdown" class="dropdown-content">
+                <a href="#" onclick="selectrole('Volunteer');">Volunteer</a>
+                <a href="#" onclick="selectrole('Staff');">Staff</a>
+              </div>
+            </div>
+
+
+
+            <label style="margin-top:5px;text-align:left;width:80px;margin-left:15px;">Workplace:</label>
+            <div class="dropdown">
+              <input style="width:170px;" name="workplace" id="workplace" class="dropbtn" placeholder="* Required" onclick="document.getElementById('workplace-dropdown').style.display= 'inline';" required>
+              <div id="workplace-dropdown" class="dropdown-content">
+                <a href="#" onclick="selectworkplace('Leyland');">Leyland</a>
+                <a href="#" onclick="selectworkplace('Chorley');">Chorley</a>
+                <a href="#" onclick="selectworkplace('West Lancashire');">West Lancashire</a>
+                <a href="#" onclick="selectworkplace('Wyre');">Wyre</a>
+                <a href="#" onclick="selectworkplace('Blackburn with Darwen');">Blackburn with Darwen</a>
+              </div>
+            </div>
+
+
+
+            <label style="margin-top:5px;text-align:left;width:30px;margin-left:15px;">Team:</label>
+            <div class="dropdown">
+              <input name="team" style="width:150px;margin-left:20px;" id="team" class="dropbtn" placeholder="* Required" onclick="document.getElementById('team-dropdown').style.display= 'inline';" required>
+              <div id="team-dropdown" class="dropdown-content">
+                <a href="#" onclick="selectteam('Debt');">Debt</a>
+                <a href="#" onclick="selectteam('Pension Wise');">Pension Wise</a>
+                <a href="#" onclick="selectteam('Generalist Advice');">Generalist Advice</a>
+                <a href="#" onclick="selectteam('Gateway');">Gateway</a>
+                <a href="#" onclick="selectteam('Telephone Gateway');">Telephone Gateway</a>
+                <a href="#" onclick="selectteam('Digital Help Centre');">Digital Help Centre</a>
+                <a href="#" onclick="selectteam('Help through Crisis');">Help through Crisis</a>
+                <a href="#" onclick="selectteam('Help to Claim');">Help to Claim</a>
+                <a href="#" onclick="selectteam('Energy');">Energy</a>
+                <a href="#" onclick="selectteam('Reception');">Reception</a>
+                <a href="#" onclick="selectteam('Admin');">Admin</a>
+                <a href="#" onclick="selectteam('Money Plan');">Money Plan</a>
+                <a href="#" onclick="selectteam('SMT');">SMT</a>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div>
+
+            <div id="person" style="float:left;margin-bottom:20px;">
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:70px;">Name:</label><input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* First and Last Names')" name="name_001" style="width:200px;"
+                  type="search" placeholder="* First and Last Names" required pattern="^[a-zA-Z\s]*$" oninvalid="this.setCustomValidity('Name required')" oninput="this.setCustomValidity('')">
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:70px;">Email:</label>
+                <input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* Required')" name="email_001" style="width:200px;" type="search" placeholder="* Required" required
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" oninvalid="this.setCustomValidity('Valid email address required')" oninput="this.setCustomValidity('')">
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:70px;">Phone:</label>
+                <input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* If Available')" name="phone_001" style="width:200px;" class type="search" placeholder="* If Available">
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:70px;">Start date:</label>
+                <input id="sdate" name="startingdate" style="width:200px;" class onfocus="(this.type='date')" onblur="(this.type='text');if (formatDate(this.value)) {this.value=formatDate(this.value)};" placeholder="* Required (Approx Date)"
+                  required>
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:70px;">End date:</label>
+                <input id="edate" name="leavingdate" style="width:200px;" class onfocus="(this.type='date')" onblur="(this.type='text');if (formatDate(this.value)) {this.value=formatDate(this.value);};" placeholder="* Required (Exact Date)" required>
+              </div>
+            </div>
+
+
+            <div id="address" style="float:right; ">
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:100px;">Address line1:</label>
+                <input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* Address line1 required')" name="addrline1_001" class="addressfields" type="search" placeholder="* Required" required
+                  oninvalid="this.setCustomValidity('Address line1 required')" oninput="this.setCustomValidity('')">
+              </div>
+
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:100px;">Address line2:</label>
+                <input name="addrline2_001" class="addressfields" type="search">
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:100px;">Town/City:</label>
+                <input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* Town or City required')" name="town_001" class="addressfields" type="search" placeholder="* Required" required
+                  oninvalid="this.setCustomValidity('Town or City required')" oninput="this.setCustomValidity('')">
+
+
+
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:100px;">County:</label>
+                <input name="county_001" class="addressfields" type="search">
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:100px;">Postcode:</label>
+                <input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* Required')" name="postcode_001" class="addressfields" type="search" placeholder="* Required"
+                  pattern="[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}" required oninvalid="this.setCustomValidity('Valid postcode required')" oninput="this.setCustomValidity('')">
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+        <div style="clear:both;"></div>
+        <p>Reason for leaving (if known)</p>
+        <div>
+          <textarea name="reasonforleaving" rows="2"></textarea>
+        </div>
+
+        <p>Outstanding expense claims?</p>
+        <div>
+          <textarea name="outstandingexpenses" rows="2"></textarea>
+        </div>
+
+
+        <p>Charity equipment to return?</p>
+        <div>
+          <textarea name="charityequipment" rows="2"></textarea>
+        </div>
+
+        <div style="width:100%;display:inline-block;">
+
+          <button id="btnsubmit" style="float:left;" onclick="checkDates(document.getElementById('sdate').value,document.getElementById('edate').value)" type="submit">Submit</button>
+
+          <div id="progress" style="float:left;display:none;margin-left:60px;margin-top:15px;">
+            <div style="float:left;display:inline;color:red;margin-right:40px;margin-top:10px;">Submitting please wait ...</div>
+            <div class="loader"></div>
+          </div>
+
+        </div>
+
+        <input type="hidden" id="days_in_post" name="days_in_post">
+
+      </form>
+    </div>
+
+  </div>
+</body>
+
+<script>
