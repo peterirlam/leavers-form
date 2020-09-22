@@ -395,3 +395,78 @@
 </body>
 
 <script>
+  function selectrole(therole) {
+    document.getElementById('role').value = therole;
+    document.getElementById('role-dropdown').style.display = 'none';
+  }
+
+  function selectworkplace(theworkplace) {
+    document.getElementById('workplace').value = theworkplace;
+    document.getElementById('workplace-dropdown').style.display = 'none';
+
+  }
+
+
+  function selectteam(theteam) {
+    document.getElementById('team').value = theteam;
+    document.getElementById('team-dropdown').style.display = 'none';
+
+  }
+
+
+  function formsubmitted() {
+    document.getElementById("btnsubmit").disabled = true;
+    document.getElementById("progress").style.display = 'inline';
+
+  }
+
+function formatDate(thedate) {
+
+
+    let current_datetime = new Date(thedate)
+
+    var day;
+    var month;
+
+    if (current_datetime.getDate().toString().length < 2) {
+      day = "0" + current_datetime.getDate();
+    } else {
+      day = current_datetime.getDate();
+    }
+
+
+    var currentmonth = current_datetime.getMonth() + 1;
+
+    if (currentmonth.toString().length < 2) {
+      month = "0" + currentmonth
+    } else {
+      month = currentmonth
+    }
+
+
+
+
+    let formatted_date = day + "/" + month + "/" + current_datetime.getFullYear();
+
+    if (!isNaN(day)) {
+
+      return formatted_date;
+
+    } else {
+
+      return false;
+    }
+}
+
+function checkDates(startdatestring, enddatestring) {
+  if ((startdatestring.length > 0) && (enddatestring.length > 0)) {
+
+
+      var isostartDate = startdatestring.split("/");
+
+      startdatestring = isostartDate[1] + "/" + isostartDate[0] + "/" + isostartDate[2];
+
+      var isoendDate = enddatestring.split("/");
+
+      enddatestring = isoendDate[1] + "/" + isoendDate[0] + "/" + isoendDate[2];
+</script>
