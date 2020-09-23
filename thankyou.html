@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Thank you</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <style>
+    html,
+    body {
+      min-height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-weight: 400;
+      color: #1c87c9;
+    }
+
+    p {
+      margin: 0 0 5px;
+    }
+
+    .main-block {
+      display: inline-block;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #1c87c9;
+      width: 100%;
+    }
+
+    #content {
+      padding: 25px;
+      vertical-align: middle;
+      text-align: center;
+      margin: auto;
+      margin-top: 10%;
+      box-shadow: 0 2px 5px #f5f5f5;
+      background: #f5f5f5;
+      width: 600px;
+
+    }
+  </style>
+  <base target="_top">
+
+</head>
+
+<body>
+  <div class="main-block">
+
+    <div id="content">
+      <h1>Thanks for submitting this form</h1>
+      <p>A report has been forwarded to staff responsible for amending relevant staff/volunteer records</p>
+      <p>A leavers letter has also been generated and emailed to - *name hidden* (Chief Executive)</p>
+      <br />
+      <br />
+      <?var url = getScriptUrl();?>
+      <a href='<?=url?>'><button style='height:35px;width:150px' type="button">Back to leaver's form</button></a>
+
+    </div>
+
+  </div>
+</body>
+
+</html>
