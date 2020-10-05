@@ -17,7 +17,6 @@
     }
 
     h2 {
-
       font-weight: 400;
       color: #FFF;
       margin-left: -40px;
@@ -29,7 +28,7 @@
       margin: 0 0 5px;
     }
 
-    .main-form {
+      .main-form {
       display: inline-block;
       flex-direction: column;
       justify-content: center;
@@ -41,13 +40,11 @@
 
     form {
       padding: 25px;
-
       margin: auto;
       margin-top: 2px;
       box-shadow: 0 2px 5px #f5f5f5;
       background: #f5f5f5;
       width: 855px;
-
     }
 
     .fas {
@@ -65,8 +62,7 @@
       transform: rotate(10deg);
     }
 
-    input,
-    textarea {
+      input, textarea {
       width: 300px;
       padding: 8px;
       margin-bottom: 12px;
@@ -77,19 +73,14 @@
 
 
     textarea {
-
       width: 97%;
       margin-bottom: 4px;
       margin-top: 10px;
-
     }
 
     .addressfields {
-
       margin-right: 100px;
-
       margin-bottom: 6px;
-
     }
 
     input::placeholder {
@@ -116,7 +107,6 @@
         flex-direction: row;
       }
 
-
       .dropbtn {
         background-color: #fff;
         color: #666;
@@ -142,7 +132,6 @@
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
         margin-top: -20px;
-
       }
 
       .dropdown-content a {
@@ -152,14 +141,11 @@
         display: block;
       }
 
-
       .center_form {
         display: flex;
         justify-content: center;
         align-items: center;
-
       }
-
     }
 
     .dropdown-content a:hover {
@@ -189,10 +175,8 @@
       -webkit-animation: spin 2s linear infinite;
       /* Safari */
       animation: spin 2s linear infinite;
-
       position: relative;
       display: inline-block;
-
     }
 
     /* Safari */
@@ -215,38 +199,21 @@
         transform: rotate(360deg);
       }
     }
-
-
-    }
+  }
+    
   </style>
 </head>
-
 <body>
-
   <div class="center_form">
-
-
     <div class="main-form">
-
       <div style="display:flex;width:100%;">
-
-
         <image src="https://drive.google.com/uc?export=view&id=1PVRpXzFhn_K50DZumnxGct6azCEGHV7W" style="vertical-align:middle;display:inline;margin-left:20%;" width="200px" height="73px" />
         <h2>Notification of Staff or Volunteer Leaving Citizens Advice Lancashire</h2>
       </div>
 
-
       <form onsubmit="formsubmitted()" action='https://script.google.com/a/calancs.org.uk/macros/s/AKfycby6iHe8fJhdQ0Hrtt87cFLTxmUd_yk2vokPpkTUFExYmjq9BMY/exec' method='post' id='leavers'>
-
-
-
-
         <div class="info">
-
-
           <div class="alldropdowns" style="display:flex;margin-bottom:10px;">
-
-
             <label style="margin-top:5px;text-align:left;width:70px;">Role:</label>
             <div class="dropdown">
               <input style="width:120px;" id="role" name="role" class="dropbtn" placeholder="* Required" onclick="document.getElementById('role-dropdown').style.display= 'inline';" required>
@@ -255,8 +222,6 @@
                 <a href="#" onclick="selectrole('Staff');">Staff</a>
               </div>
             </div>
-
-
 
             <label style="margin-top:5px;text-align:left;width:80px;margin-left:15px;">Workplace:</label>
             <div class="dropdown">
@@ -269,8 +234,6 @@
                 <a href="#" onclick="selectworkplace('Blackburn with Darwen');">Blackburn with Darwen</a>
               </div>
             </div>
-
-
 
             <label style="margin-top:5px;text-align:left;width:30px;margin-left:15px;">Team:</label>
             <div class="dropdown">
@@ -289,14 +252,11 @@
                 <a href="#" onclick="selectteam('Admin');">Admin</a>
                 <a href="#" onclick="selectteam('Money Plan');">Money Plan</a>
                 <a href="#" onclick="selectteam('SMT');">SMT</a>
-
               </div>
             </div>
-
           </div>
 
           <div>
-
             <div id="person" style="float:left;margin-bottom:20px;">
               <div style="display:flex;">
                 <label style="margin-top:8px;text-align:left;width:70px;">Name:</label><input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* First and Last Names')" name="name_001" style="width:200px;"
@@ -322,7 +282,6 @@
               </div>
             </div>
 
-
             <div id="address" style="float:right; ">
               <div style="display:flex;">
                 <label style="margin-top:8px;text-align:left;width:100px;">Address line1:</label>
@@ -338,10 +297,8 @@
                 <label style="margin-top:8px;text-align:left;width:100px;">Town/City:</label>
                 <input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* Town or City required')" name="town_001" class="addressfields" type="search" placeholder="* Required" required
                   oninvalid="this.setCustomValidity('Town or City required')" oninput="this.setCustomValidity('')">
-
-
-
               </div>
+              
               <div style="display:flex;">
                 <label style="margin-top:8px;text-align:left;width:100px;">County:</label>
                 <input name="county_001" class="addressfields" type="search">
@@ -352,10 +309,7 @@
                   pattern="[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}" required oninvalid="this.setCustomValidity('Valid postcode required')" oninput="this.setCustomValidity('')">
               </div>
             </div>
-
-
           </div>
-
         </div>
 
         <div style="clear:both;"></div>
@@ -369,28 +323,22 @@
           <textarea name="outstandingexpenses" rows="2"></textarea>
         </div>
 
-
         <p>Charity equipment to return?</p>
         <div>
           <textarea name="charityequipment" rows="2"></textarea>
         </div>
 
         <div style="width:100%;display:inline-block;">
-
           <button id="btnsubmit" style="float:left;" onclick="checkDates(document.getElementById('sdate').value,document.getElementById('edate').value)" type="submit">Submit</button>
-
           <div id="progress" style="float:left;display:none;margin-left:60px;margin-top:15px;">
             <div style="float:left;display:inline;color:red;margin-right:40px;margin-top:10px;">Submitting please wait ...</div>
             <div class="loader"></div>
           </div>
-
         </div>
 
         <input type="hidden" id="days_in_post" name="days_in_post">
-
       </form>
     </div>
-
   </div>
 </body>
 
@@ -403,28 +351,20 @@
   function selectworkplace(theworkplace) {
     document.getElementById('workplace').value = theworkplace;
     document.getElementById('workplace-dropdown').style.display = 'none';
-
   }
-
 
   function selectteam(theteam) {
     document.getElementById('team').value = theteam;
     document.getElementById('team-dropdown').style.display = 'none';
-
   }
-
 
   function formsubmitted() {
     document.getElementById("btnsubmit").disabled = true;
     document.getElementById("progress").style.display = 'inline';
-
   }
 
 function formatDate(thedate) {
-
-
     let current_datetime = new Date(thedate)
-
     var day;
     var month;
 
@@ -434,7 +374,6 @@ function formatDate(thedate) {
       day = current_datetime.getDate();
     }
 
-
     var currentmonth = current_datetime.getMonth() + 1;
 
     if (currentmonth.toString().length < 2) {
@@ -443,33 +382,21 @@ function formatDate(thedate) {
       month = currentmonth
     }
 
-
-
-
     let formatted_date = day + "/" + month + "/" + current_datetime.getFullYear();
 
     if (!isNaN(day)) {
-
       return formatted_date;
-
     } else {
-
       return false;
     }
 }
 
 function checkDates(startdatestring, enddatestring) {
   if ((startdatestring.length > 0) && (enddatestring.length > 0)) {
-
-
       var isostartDate = startdatestring.split("/");
-
       startdatestring = isostartDate[1] + "/" + isostartDate[0] + "/" + isostartDate[2];
-
       var isoendDate = enddatestring.split("/");
-
       enddatestring = isoendDate[1] + "/" + isoendDate[0] + "/" + isoendDate[2];
-
 
       // To set two dates to two variables
       //var date1 = new Date("06/30/2019");
@@ -482,14 +409,11 @@ function checkDates(startdatestring, enddatestring) {
 
       // Calculate the no. of days between the dates
       var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-
         if (Difference_In_Days >= 0) {
-
          document.getElementById("days_in_post").value = Difference_In_Days;
          document.getElementById("sdate").setCustomValidity("");
          document.getElementById("edate").setCustomValidity("");
        } else {
-
          document.getElementById("edate").setCustomValidity("Start date cannot be later than end date.");
         }
       }
